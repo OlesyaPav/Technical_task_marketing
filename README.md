@@ -80,4 +80,4 @@ target целевой признак
 24. from sklearn.feature_selection import SelectFromModel
 from imblearn.over_sampling import SMOTE
 
-Найдена модель для предсказания интернет-магазином совершения покупки клиентом, который уже покупал, в течение 90 дней. Эта модель LogisticRegression(C=1, class_weight='balanced', max_iter=1500, random_state=42, solver='saga'). Качество предсказания этой модели ROC-AUC 0,67.
+**ВЫВОД:** Найдена модель для предсказания интернет-магазином совершения покупки клиентом, который уже покупал, в течение 90 дней. Эта модель LogisticRegression(C=1, class_weight='balanced', max_iter=1500, random_state=42, solver='saga'). Качество предсказания этой модели ROC-AUC 0,67.
