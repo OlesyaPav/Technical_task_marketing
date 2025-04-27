@@ -29,51 +29,53 @@
 ## Исходные данные
 Данные о покупках клиентов по дням и по товарам. В каждой записи покупка определенного товара, его цена, количество штук. В таблице есть списки идентификаторов, к каким категориям относится товар. Часто это вложенные категории (например автотовары-аксессуары-освежители), но также может включать в начале списка маркер распродажи или маркер женщинам/мужчинам. Нумерация категорий сквозная для всех уровней, то есть 44 на второй позиции списка или на третьей – это одна и та же категория. Иногда дерево категорий обновляется, поэтому могут меняться вложенности, например ['4', '28', '44', '1594'] или ['4', '44', '1594'].
 
-датасэт apparel-purchases история покупок
+Датасэт apparel-purchases история покупок:
 
-client_id идентификатор пользователя
-quantity количество товаров в заказе
-price цена товара
-category_ids вложенные категории, к которым отнсится товар
-date дата покупки
-message_id идентификатор сообщения из рассылки
-датасэт apparel-messages история рекламных рассылок
+- client_id идентификатор пользователя
+- quantity количество товаров в заказе
+- price цена товара
+- category_ids вложенные категории, к которым отнсится товар
+- date дата покупки
+- message_id идентификатор сообщения из рассылки
 
-bulk_campaign_id идентификатор рекламной кампании
-client_id идентификатор пользователя
-message_id идентификатор сообщений
-event тип действия
-channel канал рассылки
-date дата рассылки
-created_at точное время создания сообщения
+Датасэт apparel-messages история рекламных рассылок
+
+- bulk_campaign_id идентификатор рекламной кампании
+- client_id идентификатор пользователя
+- message_id идентификатор сообщений
+- event тип действия
+- channel канал рассылки
+- date дата рассылки
+- created_at точное время создания сообщения
+
 apparel-target_binary совершит ли клиент покупку в течение следующих 90 дней
 
-client_id идентификатор пользователя
+- client_id идентификатор пользователя
 target целевой признак
 
 При построении модели использовались следующие библиотеки:
 1. import pandas as pd
 2. import ast
-from ast import literal_eval
-import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
-import phik
-import seaborn as sns
-from sklearn.model_selection import train_test_split
-import numpy as np
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
-from sklearn.impute import SimpleImputer
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
-import time
-from sklearn.metrics import roc_auc_score, classification_report
-from sklearn.datasets import make_classification
-from datetime import datetime, timedelta
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.inspection import permutation_importance
-from sklearn.feature_selection import SelectFromModel
+3. from ast import literal_eval
+4. import matplotlib.pyplot as plt
+5. from sklearn.metrics import confusion_matrix
+6. import phik
+7. import seaborn as sns
+8. from sklearn.model_selection import train_test_split
+9. import numpy as np
+10. from sklearn.pipeline import Pipeline
+11. from sklearn.compose import ColumnTransformer
+12. from sklearn.preprocessing import StandardScaler, MinMaxScaler
+13. from sklearn.impute import SimpleImputer
+14. from sklearn.preprocessing import StandardScaler
+15. from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
+16. import time
+17. from sklearn.metrics import roc_auc_score, classification_report
+18. from sklearn.datasets import make_classification
+19. from datetime import datetime, timedelta
+20. from sklearn.linear_model import LogisticRegression
+21. from sklearn.neighbors import KNeighborsClassifier
+22. from sklearn.tree import DecisionTreeClassifier
+23. from sklearn.inspection import permutation_importance
+24. from sklearn.feature_selection import SelectFromModel
 from imblearn.over_sampling import SMOTE
