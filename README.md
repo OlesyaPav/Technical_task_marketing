@@ -52,8 +52,8 @@ client_id идентификатор пользователя
 target целевой признак
 
 При построении модели использовались следующие библиотеки:
-import pandas as pd
-import ast
+1. import pandas as pd
+2. import ast
 from ast import literal_eval
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
