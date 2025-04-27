@@ -50,3 +50,30 @@ apparel-target_binary совершит ли клиент покупку в те�
 
 client_id идентификатор пользователя
 target целевой признак
+
+При построении модели использовались следующие библиотеки:
+import pandas as pd
+import ast
+from ast import literal_eval
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix
+import phik
+import seaborn as sns
+from sklearn.model_selection import train_test_split
+import numpy as np
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
+import time
+from sklearn.metrics import roc_auc_score, classification_report
+from sklearn.datasets import make_classification
+from datetime import datetime, timedelta
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.inspection import permutation_importance
+from sklearn.feature_selection import SelectFromModel
+from imblearn.over_sampling import SMOTE
